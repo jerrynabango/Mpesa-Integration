@@ -121,7 +121,7 @@ def lipa_na_mpesa(request, order_id):
                                  'details': response.json()}, status=400)
 
     except Exception as e:
-        # Handle request exceptions
+        # Handling request exceptions
         logger.error("Error during STK Push request: %s", e, exc_info=True)
         return JsonResponse({'error': 'An error occurred while processing payment'}, status=500)
 
